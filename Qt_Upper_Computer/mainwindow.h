@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPushButton>
+#include <QLabel>
+#include <QThread>
+#include "./DataWork/datawork.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +21,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QPushButton *startButton;
+    QLabel *progressLabel;
+    QThread *thread;
+    DataWork *worker;
+
+private slots:
+    void handleButton();
+    void updateProgress(int value);
 };
+
 #endif // MAINWINDOW_H

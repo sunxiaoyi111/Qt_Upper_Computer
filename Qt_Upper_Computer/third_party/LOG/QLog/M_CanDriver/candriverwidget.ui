@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CANDriverWidget</class>
+ <widget class="QWidget" name="CANDriverWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CANDriverWidget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox_device">
+     <property name="title">
+      <string>设备初始化</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="2" rowspan="2">
+       <widget class="QToolButton" name="toolButton_DevConnect">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>连接并启动</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="2">
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_devicechannel">
+          <property name="text">
+           <string>通道:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_deviceindex">
+          <property name="text">
+           <string>索引号:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBox_deviceType"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_devicebaud">
+          <property name="text">
+           <string>波特率:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBox_deviceIndex"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="comboBox_deviceChannel"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QComboBox" name="comboBox_deviceBaud"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_devicetype">
+          <property name="text">
+           <string>类型:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1" rowspan="3">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>294</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_device_2">
+     <property name="title">
+      <string>CANFD</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_devicechannel_2">
+          <property name="text">
+           <string>数据域波特率</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_deviceindex_2">
+          <property name="text">
+           <string>仲裁域波特率</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_devicebaud_2">
+          <property name="text">
+           <string>CANFD标准</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBox_arbitrationBaudRate"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="comboBox_dataDomainBaudRate"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QComboBox" name="comboBox_canFdStandard"/>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkBox_terminalResistorStatus">
+          <property name="text">
+           <string>使能终端电阻</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_device_3">
+     <property name="title">
+      <string>帧过滤</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_6">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>To :0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>From:0x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBox_CANFilterMethod"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLineEdit" name="lineEdit_canFilterStart"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_deviceindex_3">
+          <property name="text">
+           <string>滤波方式</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QLineEdit" name="lineEdit_CANFilterEnd"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_Can_send">
+     <property name="title">
+      <string>发送数据</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_9">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QWidget" name="widget_can_send" native="true">
+        <layout class="QGridLayout" name="gridLayout_10">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0" rowspan="2">
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>发送格式</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_canTxData">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>00 00 00 00 00 00 00 00</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>ID:  0x</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Data:0x</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>帧类型</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="comboBox_canTxFormat"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="comboBox__canTxType"/>
+           </item>
+           <item row="0" column="3" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_canTxCanID">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>队列发送</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>阻塞发送</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="tableView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
